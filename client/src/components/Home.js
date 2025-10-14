@@ -52,7 +52,7 @@ function Home() {
           <div className="card shadow-sm p-2 mb-5 bg-secondary rounded">
             <div className="card-body text-center bg-dark">
               <img
-                src="/images/profile.jpeg"
+                // src="/images/profile.jpeg"
                 alt="Logo"
                 className="img-fluid mx-auto d-block "
                 style={{ maxWidth: "150px" }}

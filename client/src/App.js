@@ -5,22 +5,34 @@ import EditorPage from './components/EditorPage';
 import Login from './components/Login';
 import Register from './components/Register';
 import ProtectedRoute from './components/ProtectedRoute';
+import ProfilePage from './components/ProfilePage';
 import { Toaster } from 'react-hot-toast';
 import { AuthProvider } from './context/AuthContext';
 
 function App() {
   return (
     <AuthProvider>
+
+      
       <div>
         <Toaster position='top-center' />
       </div>
+
+
       <Routes>
         {/* Public routes */}
         <Route path='/login' element={<Login />} />
         <Route path='/register' element={<Register />} />
 
         {/* Protected routes */}
+
         <Route path='/' element={
+          <ProtectedRoute>
+            <ProfilePage />
+          </ProtectedRoute>
+        } />
+        
+        <Route path='/home' element={
           <ProtectedRoute>
             <Home />
           </ProtectedRoute>
